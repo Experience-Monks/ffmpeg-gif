@@ -4,6 +4,8 @@
 
 A small script that converts videos to a high quality GIF, by spawning `ffmpeg` in two passes using `palettegen` filter.
 
+Assumes `ffmpeg` command is globally available. Tested with ffmpeg 2.6.2.
+
 ![anim.gif](./anim.gif)
 
 > <sup>The above GIF was generated with this tool</sup>
