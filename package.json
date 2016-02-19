@@ -1,0 +1,38 @@
+{
+  "name": "ffmpeg-gif",
+  "version": "1.0.0",
+  "description": "shell script to convert video to high quality GIF with ffmpeg",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "rimraf": "^2.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "ffmpeg",
+    "gif",
+    "shell",
+    "command",
+    "script"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/ffmpeg-gif.git"
+  },
+  "homepage": "https://github.com/Jam3/ffmpeg-gif",
+  "bugs": {
+    "url": "https://github.com/Jam3/ffmpeg-gif/issues"
+  },
+  "bin": {
+    "ffmpeg-gif": "./cmd.js"
+  }
+}
