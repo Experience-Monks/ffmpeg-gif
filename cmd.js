@@ -18,7 +18,7 @@ var suffix = '__tmp__palette_' + Date.now() + '.png';
 var tmpFileName = input + suffix;
 var needsCleanup = false;
 
-var ss = argv.start ? [ '-ss', argv.start ] : '';
+var ss = argv.seek ? [ '-ss', argv.seek ] : '';
 var t = argv.time ? [ '-t', argv.time ] : '';
 var inputFlag = [ '-i', input ];
 var fps = 'fps=' + (argv.fps || 20) + '';
