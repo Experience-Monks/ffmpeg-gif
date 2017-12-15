@@ -7,9 +7,15 @@ var argv = require('minimist')(process.argv.slice(2), {
     fps: 'f',
     scale: 's',
     seek: 'S',
-    time: 't'
+    time: 't',
+    help: 'h'
   }
 });
+
+if (argv.help) {
+  showHelp()
+  process.exit()
+}
 
 var input = argv._[0];
 var output = argv._[1];
@@ -50,6 +56,18 @@ function finish () {
   if (!needsCleanup) return;
   rimraf.sync(tmpFileName);
   needsCleanup = false;
+}
+
+function showHelp () {
+  console.log([
+    'Usage:\n',
+    'ffmpeg-gif input output [opts]\n',
+    'Options:\n',
+    '  --fps, -f    fps, default 20',
+    '  --scale, -s  resize to width:height (optional)',
+    '  --seek, -S   seek to time, default no seek',
+    '  --time, -t   total duration, default full clip'
+  ].join('\n'));
 }
 
 process.on('exit', () => {
